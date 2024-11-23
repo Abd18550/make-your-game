@@ -273,6 +273,18 @@ function moveGhosts() {
         pacmanDirection = -1;
   
         // Reset Ghosts' positions
+        ghostPositions.forEach((position) => {
+          // Restore dot in the current cell if it was hidden earlier
+          const currentCell = cells[position];
+          if (currentCell.classList.contains("ghost") && currentCell.querySelector(".hidden-dot")) {
+            const hiddenDot = currentCell.querySelector(".hidden-dot");
+            hiddenDot.classList.remove("hidden-dot");
+          }
+          if (currentCell.classList.contains("ghost") && currentCell.querySelector(".hidden-power-pill")) {
+            const hiddenPowerPill = currentCell.querySelector(".hidden-power-pill");
+            hiddenPowerPill.classList.remove("hidden-power-pill");
+          }
+        });
         ghostPositions.forEach(position => cells[position].classList.remove("ghost"));
         ghostPositions = [188, 189, 190, 191];
         ghostPositions.forEach(position => cells[position].classList.add("ghost"));
