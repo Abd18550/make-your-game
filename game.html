@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pac-Man Game</title>
+  <link rel="stylesheet" href="style.css">
+  
+
+</head>
+<body>
+  
+  
+  <h1>Pac-Man Game</h1>
+  
+  <!-- Player name display -->
+  <div id="game-info">
+    <div id="lives">Lives: 3</div>
+    <div id="timer">00:00</div>
+    <div id="score">Score: 0</div>
+  </div>
+  <div id="game-board">
+    <!-- Pause menu -->
+    <div id="pause-menu" class="hidden">
+      <div class="menu-content">
+        <button id="resume-button">Resume Game</button>
+        <button id="restart-button">Restart Game</button>
+        <button id="home-button">Back to Home Screen</button>
+        <audio id="game-audio" src="pacman_intermission.mp3" autoplay loop controls></audio>
+        <audio id="pacman-death" src="pacman_death.wav"></audio>
+        <audio id="pacman-victory" src="pacman-victory.mp3"></audio>
+      </div>
+    </div>
+    
+  </div>
+  <div id="fps"></div>
+  <div id="player-name">Player: </div>
+  <div id="player-fps">
+    <div></div>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+</html>
+
