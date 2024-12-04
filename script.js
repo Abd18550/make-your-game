@@ -334,6 +334,7 @@ setInterval(moveGhosts, ghostSpeed); // Move ghosts continuously
     pauseMenu.style.display = 'flex'; // Show the menu as a flexbox
     // Add any game-specific pause logic here (e.g., stop game loop)
     clearInterval(timerInterval);
+    clearInterval(pacmanMoveInterval);
   }
   
   function resumeGame() {
